@@ -18,7 +18,7 @@ export const signup=async (req,res)=>{
             name,password:hashedpassword,email
         })
        
-        const token =await genToken()
+        const token =await genToken(user._id)
 
          res.cookie("token",token,{
             httpOnly:true,
@@ -43,16 +43,16 @@ export const login=async (req,res)=>{
         const {email,password}=req.body
         const user=await User.findOne({email})
         if(!user){
-            return res.status(400).json({message:"email does not exists"})
+            return res.status(400).json({message:"Incorrect Credentials"})
         }
 
         const ismatch=await bcrypt.compare(password,user.password)
         if(!ismatch){
-              return res.status(400).json({message:"incorrect password"})
+              return res.status(400).json({message:"Incorrect Credentials"})
         }
 
         
-        const token =await genToken()
+        const token =await genToken(user._id)
 
          res.cookie("token",token,{
             httpOnly:true,
@@ -64,7 +64,7 @@ export const login=async (req,res)=>{
          return res.status(200).json(user)
     }
     catch(error){
-        return res.status(500).json({message:`sign up error ${error}`})
+        return res.status(500).json({message:`login error ${error}`})
 
     }
 }

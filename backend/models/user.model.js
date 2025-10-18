@@ -10,10 +10,14 @@ import mongoose from "mongoose";
         required:true,
         unique:true
     },
-    assistantName:{
-        tyre:String,
+    password:{ 
+      type:String,
+      required:true
     },
-    assistantImage:{
+    assistantname:{
+        type:String,
+    },
+    assistantimage:{
         type:String,
     },
     history:[
