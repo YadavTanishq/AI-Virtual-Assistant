@@ -4,7 +4,7 @@ import { useState } from 'react'
 import axios from "axios"
 export const UserDataContext=createContext()
 function Usercontext({children}) {
-  const serverurl="http://localhost:5001"
+  const serverurl="https://ai-virtual-assistant-backend-4jfa.onrender.com"
    const [frontendimage,setfrontendimage]=useState(null)
     const [backendimage,setbackendimage]=useState(null)
   const [userdata,setuserdata]=useState(null)
