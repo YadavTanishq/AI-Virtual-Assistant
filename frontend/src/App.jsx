@@ -11,7 +11,7 @@ import Customize2 from './pages/Customize2'
   return (
    <Routes>
     <Route path='/' element={(userdata?.assistantimage && userdata?.assistantname)? <Home/>: <Navigate to={"/customize" }/>}/>
-    <Route path='/signup' element={!userdata?<Signup/>:<Navigate to={"/customize"}/>}/>
+    <Route path='/signup' element={!userdata?<Signup/>:<Navigate to={"/"}/>}/>
     <Route path='/signin' element={!userdata?<Signin/>:<Navigate to={"/"}/>}/>
         <Route path='/customize' element={userdata?<Customize/>:<Navigate to={"/signup"}/>}/>
     <Route path='/customize2' element={userdata?<Customize2/>:<Navigate to={"/signup"}/>}/>
