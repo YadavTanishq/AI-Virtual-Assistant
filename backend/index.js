@@ -9,7 +9,7 @@ import userRouter from "./routes/user.routes.js";
 
 const app=express();
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://ai-virtual-assistant-8c6x.onrender.com",
     credentials:true
 }))
 const port=process.env.PORT || 5000
