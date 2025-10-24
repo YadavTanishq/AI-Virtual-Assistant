@@ -33,7 +33,7 @@ Your task is to understand the user's natural language input and respond ONLY wi
 - If the user says "open calculator", set type = "calculator_open".
 - If the user says "open Instagram", set type = "instagram_open".
 - If the user says "open Facebook", set type = "facebook_open".
-- If the user asks about weather, set type = "weather_show" and userinput = the city name.
+- If the user asks about weather, set type = "weather_show".
 - If the user asks a factual, academic, or general question (e.g. "What is Bernoulli theorem?"),
   set type = "general" and provide a **meaningful, informative answer** in the response field.
 
